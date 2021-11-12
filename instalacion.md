@@ -8,7 +8,7 @@
 
   2. Una vez tenemos el vagrant tenemos que descargar [nextcloud](https://nextcloud.com/). Para ello pulsamos en "Get nextcloud" y en el desplegable pulsamos "Server packages", en la ventana que se abrira hacemos clic en Download nexcloud para decargarlo
 
-  ![](/Nextcloud/img/N1.png)
+  ![pagina](/Nextcloud/img/N1.png)
 
   3. Cuando tenemos los dos ficheros colocamos los dos en la misma carpeta y abrimos el terminal. Nos colocamos en la carpeta utilizando el comando cd y ejecutamos el comando `vagrant up` y una vez este termine hacemos `vagrant ssh`
 
