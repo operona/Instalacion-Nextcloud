@@ -42,4 +42,31 @@
 
   ![](/Nextcloud/img/7.png)
 
-  7. 
+  7. Lo siguiente sera intalar el `mysql-server` y algunas librerias `php`. Para ello ejecuta la siguiente lista de comandos:
+
+  ~~~
+  apt update
+  apt install -y mysql-server
+  apt install php libapache2-mod-php
+  apt install php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
+  ~~~
+
+  Al finalizar reiniciamos el servidor con `systemctl restart apache2`
+
+  8. Ahora crearemos la base de datos, para ello entramos en el mysql ejecutando `mysql` en el terminal. Seguidamente ejecutamos el siguiente comando:
+  ~~~
+  CREATE DATABASE bbdd;
+  ~~~
+  Seguidamente creamos los usuarios (en este caso se llaman usuario y de contraseña tienen password)
+  ~~~
+  CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+  CREATE USER 'usuario'@'192.168.22.100' IDENTIFIED WITH mysql_native_password BY 'password';
+  ~~~
+  Y ahora le daremos privilegios a los usuarios que acabamos de crear con los siguientes comandos:
+  ~~~
+  GRANT ALL ON bbdd.* to 'usuario'@'localhost';
+  GRANT ALL ON bbdd.* to 'usuario'@'192.168.22.100';
+  ~~~
+
+  9. Ya hemos terminado, simplemetne reiniciamos el servidor con `systemctl restart  apache2`.
+  Para acceder al nexcloud simplemente vamos a nuesto navegador y buscamos `localhost:8080`
