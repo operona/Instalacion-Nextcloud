@@ -8,11 +8,11 @@
 
   2. Una vez tenemos el vagrant tenemos que descargar [nextcloud](https://nextcloud.com/). Para ello pulsamos en "Get nextcloud" y en el desplegable pulsamos "Server packages", en la ventana que se abrira hacemos clic en Download nexcloud para decargarlo
 
-  ![pagina](/Nextcloud/img/N1.png)
+  ![](img/N1.png)
 
   3. Cuando tenemos los dos ficheros colocamos los dos en la misma carpeta y abrimos el terminal. Nos colocamos en la carpeta utilizando el comando cd y ejecutamos el comando `vagrant up` y una vez este termine hacemos `vagrant ssh`
 
-  ![](/Nextcloud/img/vagrant.up.png)
+  ![](img/vagrant.up.png)
 
   4. Despues de hacer ssh ya estamos en la maquina virtual. Ahora lo que tenemos que hacer es instalar apache2, para ello, siendo sudo (si no lo eres ejecuta el momando `sudo -s`) ejecutamos los siguientes comandos:
 
@@ -29,7 +29,7 @@
 
   5.  El siguiente paso sera descomprimir el fichero, para ello primero tenemos que instalar el unzip. Siendo sudo (si no lo eres ejecuta el momando `sudo -s`) ejecuta el comando `apt update` y despues `apt install unzip`. Seguidamente dentro de la carpeta `/var/www/html` ejecutamos el comando `unzip nextcloud-22.2.0.zip`, despues si hacemos `ls` podremos ver que estan todos los ficheros
 
-  ![](/Nextcloud/img/4.png)
+  ![](img/4.png)
 
   6. Despues de esto lo que tendremos que hacer es cambiarle los permisos a todos estos ficheros, para ellos dentro de esta carpeta ejecutamos todos estos comandos:
 
@@ -40,7 +40,7 @@
 
   Despues de esto si hacemos `ls-l` veremos veremos los ficheros con los sigueitnes permisos:
 
-  ![](/Nextcloud/img/7.png)
+  ![](/img/7.png)
 
   7. Lo siguiente sera intalar el `mysql-server` y algunas librerias `php`. Para ello ejecuta la siguiente lista de comandos:
 
